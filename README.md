@@ -1,5 +1,10 @@
 # backbone-collection-wax
 
+> ### Wax on, Wax Off. Don't forget to breathe. Very Important!  
+Mr Miyagi
+
+[backbone-wax](https://github.com/CascadeEnergy/backbone-collection-wax/blob/master/MrMiyagi-Karate-Kid.png)
+
 [![Build Status](https://secure.travis-ci.org/CascadeEnergy/backbone-collection-wax.png?branch=master)](https://travis-ci.org/CascadeEnergy/backbone-collection-wax)
 
 Backbone.Collection mixin which works with backbone-model-wax to provide methods for controlling 'on'/'off' state in collections
@@ -21,7 +26,7 @@ Contributers:
 ---
 ### [Usage](id:usage)
 
-This mixin is a part of team with **[backbone-model-wax](https://github.com/CascadeEnergy/backbone-model-wax)**. They are dependencies of each other, you need both. If you install with bower. When you get one, you get the other.
+This mixin is a part of team with **[backbone-model-wax](https://github.com/CascadeEnergy/backbone-model-wax)**. If you install with bower, you will recieve both.
 
 A waxy backbone collection needs to at least extend collectionwax, and listen for a `wax` event to be handled by the `breathe()` method.
 
