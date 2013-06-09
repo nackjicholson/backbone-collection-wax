@@ -15,10 +15,10 @@
     "**/*.html"
   ],
   "dependencies": {
-    "backbone-model-wax": "~0.1.0",
     "backbone": "~1.0.0",
     "underscore": "~1.4.4",
-    "jquery": "~2.0.2"
+    "jquery": "~2.0.2",
+    "backbone-model-wax": "latest"
   },
   "devDependencies": {
     "mocha": "~1.9.0",
@@ -26,4 +26,3 @@
     "chai": "~1.6.0"
   }
 }
-
