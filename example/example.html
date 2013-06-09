@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Backbone model wax</title>
+  <style type="text/css">
+    .on {
+      background-color: green;
+    }
+    li:hover {
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <ul id="hero-list"></ul>
+
+  <script type="text/javascript" src="../bower_components/jquery/jquery.js"></script>
+  <script type="text/javascript" src="../bower_components/underscore/underscore.js"></script>
+  <script type="text/javascript" src="../bower_components/backbone/backbone.js"></script>
+  <script type="text/javascript" src="../bower_components/backbone-model-wax/backbone-model-wax.js"></script>
+  <script type="text/javascript" src="../backbone-collection-wax.js"></script>
+  <script type="text/javascript">
+    $(function() {
+      'use strict';
+
+      var HeroModel = Backbone.Model.extend({
+        defaults: {
+          on: false,
+          name: undefined
+        }
+      })
+      _.extend(HeroModel.prototype, modelwax)
+
+      var HeroesCollection = Backbone.Collection.extend({
+        model: HeroModel,
+        initialize: function() {
+          this.on('wax', this.breathe, this)
+        }
+      })
+      _.extend(HeroesCollection.prototype, collectionwax)
+
+      var HeroItem = Backbone.View.extend({
+        tagName: 'li',
+
+        events: {"click": "clicked"},
+
+        template: _.template($('#item-template').html()), 
+
+        initialize: function() {
+          this.model.on("change", this.render, this)
+        },
+
+        render: function() {
+          var on = this.model.isOn()
+          this.$el.toggleClass('on', on)
+          this.$el.html(this.template(this.model.toJSON()))
+          return this
+        },
+
+        clicked: function() {
+          this.model.wax();
+        }
+      })
+
+      var HeroList = Backbone.View.extend({
+        initialize: function() {
+          this.render() 
+        },
+
+        render: function() {
+          this.collection.each(function(hero) {
+            var item = new HeroItem({model: hero})
+            this.$el.append(item.render().el)
+          }, this)
+        }
+      })
+
+      var heroes = new HeroesCollection([
+        {id: 1, name: 'Daniel San'},
+        {id: 2, name: 'Mr. Miyagi'},
+        {id: 3, name: 'Dan Brown'}
+      ])
+      var list = new HeroList({el: $("#hero-list"), collection: heroes})
+    });
+  </script>
+
+  <!-- templateS -->
+  <script type="text/template" id="item-template">
+    <%= name %>
+  </script> 
+</body>
+</html>
