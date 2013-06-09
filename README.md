@@ -4,6 +4,7 @@
 Mr Miyagi
 
 ![backbone-wax](https://raw.github.com/CascadeEnergy/backbone-collection-wax/master/MrMiyagi-Karate-Kid.png)
+image attributed to Dean T Fraser &copy; springfieldpunx.blogspot.com
 
 [![Build Status](https://secure.travis-ci.org/CascadeEnergy/backbone-collection-wax.png?branch=master)](https://travis-ci.org/CascadeEnergy/backbone-collection-wax)
 
