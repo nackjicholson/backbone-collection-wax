@@ -3,7 +3,7 @@
 > ### Wax on, Wax Off. Don't forget to breathe. Very Important!  
 Mr Miyagi
 
-![backbone-wax](https://raw.github.com/CascadeEnergy/backbone-collection-wax/blob/master/MrMiyagi-Karate-Kid.png)
+![backbone-wax](https://raw.github.com/CascadeEnergy/backbone-collection-wax/master/MrMiyagi-Karate-Kid.png)
 
 [![Build Status](https://secure.travis-ci.org/CascadeEnergy/backbone-collection-wax.png?branch=master)](https://travis-ci.org/CascadeEnergy/backbone-collection-wax)
 
