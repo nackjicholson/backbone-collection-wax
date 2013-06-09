@@ -87,12 +87,18 @@ and then navigate to <http://localhost:8000/example/example.html>
 [top](#contents)
 ### [API](id:api)
 
-  _documentation needed_
+  _collectionwax documentation needed_
 
   - **multiselect**
   - **breathe()**
   - **getActive()**
   - **waxOffAll()**
+
+
+  _modelwax documentation needed_
+
+  - **wax()**
+  - **isOn()**
 
 ---
 [top](#contents)
